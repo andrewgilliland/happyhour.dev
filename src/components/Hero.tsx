@@ -159,7 +159,7 @@ const styles: Record<string, React.CSSProperties> = {
     width: "120px",
     height: "2px",
     marginTop: "2rem",
-    background: "linear-gradient(90deg, transparent, #00f0ff, transparent)",
+    background: "#00f0ff",
     borderRadius: "1px",
     transformOrigin: "center",
   },

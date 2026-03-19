@@ -73,8 +73,7 @@ export default function About() {
             variants={cardVariants}
             whileHover={{
               y: -6,
-              boxShadow:
-                "0 0 25px rgba(0, 240, 255, 0.15), 0 0 60px rgba(0, 240, 255, 0.05)",
+              boxShadow: "0 0 0 3px #00f0ff",
               borderColor: "rgba(0, 240, 255, 0.4)",
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}

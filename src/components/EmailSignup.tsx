@@ -86,7 +86,7 @@ export default function EmailSignup() {
                 disabled={status === "loading"}
                 whileHover={{
                   scale: 1.03,
-                  boxShadow: "0 0 25px rgba(0, 240, 255, 0.35)",
+                  boxShadow: "0 0 0 3px #00f0ff",
                 }}
                 whileTap={{ scale: 0.97 }}
                 style={{
@@ -168,7 +168,8 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "1rem",
     fontWeight: 600,
     fontFamily: "'Outfit', system-ui, sans-serif",
-    background: "linear-gradient(135deg, #00f0ff, #b44dff)",
+    background:
+      "linear-gradient(135deg, #00f0ff 0%, #00f0ff 33%, #b44dff 33%, #b44dff 66%, #ff00e5 66%, #ff00e5 100%)",
     color: "#0a0a0f",
     border: "none",
     borderRadius: "12px",
