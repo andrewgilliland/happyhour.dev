@@ -42,21 +42,33 @@ export default function Hero() {
 
       {/* Main title — staggered letter reveal */}
       <h1 style={styles.title}>
-        {title.split("").map((char, i) => (
-          <motion.span
-            key={i}
-            custom={i}
-            variants={letterVariants}
-            initial="hidden"
-            animate="visible"
-            style={{
-              display: char === " " ? "inline" : "inline-block",
-              whiteSpace: char === " " ? "pre" : undefined,
-            }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        ))}
+        {title.split(" ").map((word, wordIndex, words) => {
+          const charOffset = words
+            .slice(0, wordIndex)
+            .reduce((sum, w) => sum + w.length + 1, 0);
+          return (
+            <span
+              key={wordIndex}
+              style={{ display: "inline-block", whiteSpace: "nowrap" }}
+            >
+              {word.split("").map((char, charIndex) => (
+                <motion.span
+                  key={charIndex}
+                  custom={charOffset + charIndex}
+                  variants={letterVariants}
+                  initial="hidden"
+                  animate="visible"
+                  style={{ display: "inline-block" }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+              {wordIndex < words.length - 1 && (
+                <span style={{ display: "inline" }}>&nbsp;</span>
+              )}
+            </span>
+          );
+        })}
       </h1>
 
       {/* Tagline */}
@@ -129,7 +141,7 @@ const styles: Record<string, React.CSSProperties> = {
     lineHeight: 1.1,
     margin: 0,
     background:
-      "linear-gradient(135deg, #00f0ff 0%, #b44dff 50%, #ff00e5 100%)",
+      "linear-gradient(135deg, #00f0ff 0%, #00f0ff 33%, #b44dff 33%, #b44dff 66%, #ff00e5 66%, #ff00e5 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
