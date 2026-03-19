@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import { colors, fonts, gradients } from "../theme";
 
 const letterVariants = {
@@ -102,7 +103,7 @@ export default function Hero() {
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           style={{ display: "inline-block" }}
         >
-          ↓
+          <ChevronDown size={28} color={colors.textMuted} />
         </motion.span>
       </motion.div>
     </section>
