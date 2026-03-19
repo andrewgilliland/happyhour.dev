@@ -1,21 +1,23 @@
 import { motion } from "framer-motion";
+import { Beer, Globe, Zap } from "lucide-react";
 import { colors, fonts, gradients, glows } from "../theme";
+import type { ReactNode } from "react";
 
-const cards = [
+const cards: { icon: ReactNode; title: string; description: string }[] = [
   {
-    icon: "🍻",
+    icon: <Beer size={32} color={colors.neonCyan} />,
     title: "Grab a Drink, Talk Code",
     description:
       "Casual in-person meetups where developers hang out, share ideas, and build connections — no slides, no pressure.",
   },
   {
-    icon: "🌍",
+    icon: <Globe size={32} color={colors.neonPurple} />,
     title: "Chapters Worldwide",
     description:
       "From San Francisco to Berlin to Tokyo — Developer Happy Hour is coming to cities around the globe. Start one in yours.",
   },
   {
-    icon: "⚡",
+    icon: <Zap size={32} color={colors.neonMagenta} />,
     title: "All Levels, All Stacks",
     description:
       "Whether you write React, Rust, or Ruby — junior or staff — everyone's welcome. The only requirement: curiosity.",
@@ -104,7 +106,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: 700,
     textAlign: "center",
     margin: 0,
-    background: gradients.headingSubtle,
+    background: gradients.headingBold,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
@@ -131,9 +133,9 @@ const styles: Record<string, React.CSSProperties> = {
     transition: "border-color 0.3s",
   },
   icon: {
-    fontSize: "2.2rem",
     display: "block",
     marginBottom: "0.75rem",
+    lineHeight: 0,
   },
   cardTitle: {
     fontFamily: fonts.heading,

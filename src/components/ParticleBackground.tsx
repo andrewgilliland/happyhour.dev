@@ -56,6 +56,13 @@ export default function ParticleBackground() {
           size: {
             value: { min: 1, max: 3 },
           },
+          stroke: {
+            width: 1,
+            color: {
+              value: [colors.neonCyan, colors.neonMagenta, colors.neonPurple],
+            },
+            opacity: 0.4,
+          },
         },
         interactivity: {
           events: {

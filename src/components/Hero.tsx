@@ -124,7 +124,7 @@ const styles: Record<string, React.CSSProperties> = {
   badge: {
     marginBottom: "1.5rem",
     padding: "0.5rem 1.5rem",
-    border: `1px solid rgba(0, 240, 255, 0.3)`,
+    border: `2px solid ${colors.neonCyan}`,
     borderRadius: "999px",
     background: "rgba(0, 240, 255, 0.05)",
   },

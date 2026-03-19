@@ -15,7 +15,7 @@ export const colors = {
 
 export const gradients = {
   title: `linear-gradient(135deg, ${colors.neonCyan} 0%, ${colors.neonCyan} 33%, ${colors.neonPurple} 33%, ${colors.neonPurple} 66%, ${colors.neonMagenta} 66%, ${colors.neonMagenta} 100%)`,
-  headingSubtle: `linear-gradient(135deg, ${colors.text}, ${colors.neonCyan})`,
+  headingBold: `linear-gradient(135deg, ${colors.text} 0%, ${colors.text} 50%, ${colors.neonCyan} 50%, ${colors.neonCyan} 100%)`,
 } as const;
 
 export const fonts = {
