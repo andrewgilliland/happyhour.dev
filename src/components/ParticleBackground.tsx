@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { colors } from "../theme";
 
 export default function ParticleBackground() {
   const [ready, setReady] = useState(false);
@@ -21,9 +22,11 @@ export default function ParticleBackground() {
         background: { color: { value: "transparent" } },
         fpsLimit: 60,
         particles: {
-          color: { value: ["#00f0ff", "#ff00e5", "#b44dff"] },
+          color: {
+            value: [colors.neonCyan, colors.neonMagenta, colors.neonPurple],
+          },
           links: {
-            color: "#00f0ff",
+            color: colors.neonCyan,
             distance: 150,
             enable: true,
             opacity: 0.12,

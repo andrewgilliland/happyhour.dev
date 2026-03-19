@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { colors, fonts, gradients, glows } from "../theme";
 
 const cards = [
   {
@@ -73,7 +74,7 @@ export default function About() {
             variants={cardVariants}
             whileHover={{
               y: -6,
-              boxShadow: "0 0 0 3px #00f0ff",
+              boxShadow: glows.cyanBorder,
               borderColor: "rgba(0, 240, 255, 0.4)",
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -98,19 +99,19 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0 auto",
   },
   heading: {
-    fontFamily: "'Space Grotesk', system-ui, sans-serif",
+    fontFamily: fonts.heading,
     fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
     fontWeight: 700,
     textAlign: "center",
     margin: 0,
-    background: "linear-gradient(135deg, #e0e0e8, #00f0ff)",
+    background: gradients.headingSubtle,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
   },
   subheading: {
     textAlign: "center",
-    color: "#8888a0",
+    color: colors.textMuted,
     fontSize: "1.1rem",
     marginTop: "0.75rem",
     marginBottom: "3rem",
@@ -121,8 +122,8 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "1.5rem",
   },
   card: {
-    background: "rgba(18, 18, 26, 0.7)",
-    border: "1px solid rgba(255, 255, 255, 0.06)",
+    background: colors.surface,
+    border: `1px solid ${colors.white06}`,
     borderRadius: "16px",
     padding: "2rem",
     backdropFilter: "blur(10px)",
@@ -135,15 +136,15 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: "0.75rem",
   },
   cardTitle: {
-    fontFamily: "'Space Grotesk', system-ui, sans-serif",
+    fontFamily: fonts.heading,
     fontSize: "1.2rem",
     fontWeight: 600,
-    color: "#e0e0e8",
+    color: colors.text,
     margin: "0 0 0.5rem 0",
   },
   cardDesc: {
     fontSize: "0.95rem",
-    color: "#8888a0",
+    color: colors.textMuted,
     lineHeight: 1.65,
     margin: 0,
   },

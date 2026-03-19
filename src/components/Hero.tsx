@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { colors, fonts, gradients } from "../theme";
 
 const letterVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -123,34 +124,33 @@ const styles: Record<string, React.CSSProperties> = {
   badge: {
     marginBottom: "1.5rem",
     padding: "0.5rem 1.5rem",
-    border: "1px solid rgba(0, 240, 255, 0.3)",
+    border: `1px solid rgba(0, 240, 255, 0.3)`,
     borderRadius: "999px",
     background: "rgba(0, 240, 255, 0.05)",
   },
   badgeText: {
-    fontFamily: "'JetBrains Mono', monospace",
+    fontFamily: fonts.mono,
     fontSize: "0.85rem",
     fontWeight: 700,
     letterSpacing: "0.25em",
-    color: "#00f0ff",
+    color: colors.neonCyan,
   },
   title: {
-    fontFamily: "'Space Grotesk', system-ui, sans-serif",
+    fontFamily: fonts.heading,
     fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
     fontWeight: 700,
     lineHeight: 1.1,
     margin: 0,
-    background:
-      "linear-gradient(135deg, #00f0ff 0%, #00f0ff 33%, #b44dff 33%, #b44dff 66%, #ff00e5 66%, #ff00e5 100%)",
+    background: gradients.title,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     filter: "drop-shadow(0 0 30px rgba(0, 240, 255, 0.15))",
   },
   tagline: {
-    fontFamily: "'Outfit', system-ui, sans-serif",
+    fontFamily: fonts.body,
     fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
-    color: "#8888a0",
+    color: colors.textMuted,
     marginTop: "1.25rem",
     maxWidth: "500px",
     lineHeight: 1.6,
@@ -159,7 +159,7 @@ const styles: Record<string, React.CSSProperties> = {
     width: "120px",
     height: "2px",
     marginTop: "2rem",
-    background: "#00f0ff",
+    background: colors.neonCyan,
     borderRadius: "1px",
     transformOrigin: "center",
   },
@@ -167,6 +167,6 @@ const styles: Record<string, React.CSSProperties> = {
     position: "absolute",
     bottom: "2.5rem",
     fontSize: "1.5rem",
-    color: "#8888a0",
+    color: colors.textMuted,
   },
 };

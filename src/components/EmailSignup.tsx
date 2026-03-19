@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { colors, fonts, gradients, glows } from "../theme";
 
 // Replace "your-username" with your actual Buttondown username
 const BUTTONDOWN_USERNAME = "your-username";
@@ -86,7 +87,7 @@ export default function EmailSignup() {
                 disabled={status === "loading"}
                 whileHover={{
                   scale: 1.03,
-                  boxShadow: "0 0 0 3px #00f0ff",
+                  boxShadow: glows.cyanBorder,
                 }}
                 whileTap={{ scale: 0.97 }}
                 style={{
@@ -123,22 +124,22 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0 auto",
   },
   container: {
-    background: "rgba(18, 18, 26, 0.6)",
-    border: "1px solid rgba(0, 240, 255, 0.1)",
+    background: colors.surfaceLight,
+    border: `1px solid rgba(0, 240, 255, 0.1)`,
     borderRadius: "20px",
     padding: "3rem 2.5rem",
     backdropFilter: "blur(12px)",
     textAlign: "center",
   },
   heading: {
-    fontFamily: "'Space Grotesk', system-ui, sans-serif",
+    fontFamily: fonts.heading,
     fontSize: "clamp(1.5rem, 3.5vw, 2rem)",
     fontWeight: 700,
     margin: 0,
-    color: "#e0e0e8",
+    color: colors.text,
   },
   subtext: {
-    color: "#8888a0",
+    color: colors.textMuted,
     fontSize: "1rem",
     marginTop: "0.5rem",
     marginBottom: "2rem",
@@ -155,11 +156,11 @@ const styles: Record<string, React.CSSProperties> = {
     minWidth: "0",
     padding: "0.85rem 1.2rem",
     fontSize: "1rem",
-    fontFamily: "'Outfit', system-ui, sans-serif",
-    background: "rgba(255, 255, 255, 0.04)",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
+    fontFamily: fonts.body,
+    background: colors.white04,
+    border: `1px solid ${colors.white10}`,
     borderRadius: "12px",
-    color: "#e0e0e8",
+    color: colors.text,
     outline: "none",
     transition: "border-color 0.2s",
   },
@@ -167,10 +168,9 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "0.85rem 2rem",
     fontSize: "1rem",
     fontWeight: 600,
-    fontFamily: "'Outfit', system-ui, sans-serif",
-    background:
-      "linear-gradient(135deg, #00f0ff 0%, #00f0ff 33%, #b44dff 33%, #b44dff 66%, #ff00e5 66%, #ff00e5 100%)",
-    color: "#0a0a0f",
+    fontFamily: fonts.body,
+    background: gradients.title,
+    color: colors.bg,
     border: "none",
     borderRadius: "12px",
     cursor: "pointer",
@@ -180,11 +180,11 @@ const styles: Record<string, React.CSSProperties> = {
   successMessage: {
     padding: "1rem",
     fontSize: "1.1rem",
-    color: "#00f0ff",
+    color: colors.neonCyan,
     fontWeight: 500,
   },
   errorText: {
-    color: "#ff4466",
+    color: colors.error,
     fontSize: "0.9rem",
     marginTop: "0.75rem",
   },
