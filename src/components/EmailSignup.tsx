@@ -10,7 +10,7 @@ export default function EmailSignup() {
     "idle" | "loading" | "success" | "error"
   >("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
 
@@ -131,7 +131,7 @@ const styles: Record<string, React.CSSProperties> = {
     textAlign: "center",
   },
   heading: {
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'Space Grotesk', system-ui, sans-serif",
     fontSize: "clamp(1.5rem, 3.5vw, 2rem)",
     fontWeight: 700,
     margin: 0,
@@ -155,7 +155,7 @@ const styles: Record<string, React.CSSProperties> = {
     minWidth: "0",
     padding: "0.85rem 1.2rem",
     fontSize: "1rem",
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'Outfit', system-ui, sans-serif",
     background: "rgba(255, 255, 255, 0.04)",
     border: "1px solid rgba(255, 255, 255, 0.1)",
     borderRadius: "12px",
@@ -167,7 +167,7 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "0.85rem 2rem",
     fontSize: "1rem",
     fontWeight: 600,
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'Outfit', system-ui, sans-serif",
     background: "linear-gradient(135deg, #00f0ff, #b44dff)",
     color: "#0a0a0f",
     border: "none",

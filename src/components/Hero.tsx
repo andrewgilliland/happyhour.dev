@@ -5,7 +5,11 @@ const letterVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.6 + i * 0.04, duration: 0.5, ease: "easeOut" },
+    transition: {
+      delay: 0.6 + i * 0.04,
+      duration: 0.5,
+      ease: "easeOut" as const,
+    },
   }),
 };
 
@@ -119,7 +123,7 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#00f0ff",
   },
   title: {
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'Space Grotesk', system-ui, sans-serif",
     fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
     fontWeight: 700,
     lineHeight: 1.1,
@@ -132,7 +136,7 @@ const styles: Record<string, React.CSSProperties> = {
     filter: "drop-shadow(0 0 30px rgba(0, 240, 255, 0.15))",
   },
   tagline: {
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'Outfit', system-ui, sans-serif",
     fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
     color: "#8888a0",
     marginTop: "1.25rem",

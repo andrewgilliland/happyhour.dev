@@ -33,7 +33,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 
@@ -99,7 +99,7 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0 auto",
   },
   heading: {
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'Space Grotesk', system-ui, sans-serif",
     fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
     fontWeight: 700,
     textAlign: "center",
@@ -136,7 +136,7 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: "0.75rem",
   },
   cardTitle: {
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'Space Grotesk', system-ui, sans-serif",
     fontSize: "1.2rem",
     fontWeight: 600,
     color: "#e0e0e8",
