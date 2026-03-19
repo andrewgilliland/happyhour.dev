@@ -6,21 +6,21 @@ import type { ReactNode } from "react";
 const cards: { icon: ReactNode; title: string; description: string }[] = [
   {
     icon: <Beer size={32} color={colors.neonCyan} />,
-    title: "Grab a Drink, Talk Code",
+    title: "Drinks First, Code Second",
     description:
-      "Casual in-person meetups where developers hang out, share ideas, and build connections — no slides, no pressure.",
+      "No slides. No standups. Just devs, drinks, and conversations that start with 'so I had this bug' and end somewhere... unexpected.",
   },
   {
     icon: <Globe size={32} color={colors.neonPurple} />,
-    title: "Chapters Worldwide",
+    title: "Worldwide Weirdness",
     description:
-      "From San Francisco to Berlin to Tokyo — Developer Happy Hour is coming to cities around the globe. Start one in yours.",
+      "From San Francisco to Berlin to Tokyo — we're spawning chapters everywhere. Your city's next. You can't stop us.",
   },
   {
     icon: <Zap size={32} color={colors.neonMagenta} />,
     title: "All Levels, All Stacks",
     description:
-      "Whether you write React, Rust, or Ruby — junior or staff — everyone's welcome. The only requirement: curiosity.",
+      "React devs, Rust nerds, Ruby holdouts — junior or staff — everyone's in. The only requirement: show up and be yourself.",
   },
 ];
 
@@ -60,7 +60,8 @@ export default function About() {
         transition={{ duration: 0.6, delay: 0.1 }}
         style={styles.subheading}
       >
-        A global network of local developer meetups. Good vibes only.
+        A global network of developer meetups where things get a little weird.
+        On purpose.
       </motion.p>
 
       <motion.div

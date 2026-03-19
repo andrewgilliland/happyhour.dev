@@ -47,7 +47,7 @@ export default function EmailSignup() {
       >
         <h2 style={styles.heading}>Get Notified</h2>
         <p style={styles.subtext}>
-          Be the first to know when Developer Happy Hour launches in your city.
+          Be the first to know when stuff gets weird in your city.
         </p>
 
         <AnimatePresence mode="wait">

@@ -80,7 +80,7 @@ export default function Hero() {
         transition={{ delay: 1.8, duration: 0.7, ease: "easeOut" }}
         style={styles.tagline}
       >
-        In-person meetups for developers, worldwide.
+        Where devs grab drinks and stuff gets weird.
       </motion.p>
 
       {/* Decorative glowing line */}
