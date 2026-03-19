@@ -1,11 +1,68 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import ParticleBackground from "../components/ParticleBackground";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import EmailSignup from "../components/EmailSignup";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="particle-wrapper">
+    <ParticleBackground client:load />
+  </div>
+  <main>
+    <Hero client:load />
+    <About client:visible />
+    <EmailSignup client:visible />
+  </main>
+  <footer>
+    <p>
+      &copy; {new Date().getFullYear()} Developer Happy Hour. All rights reserved.
+    </p>
+  </footer>
 </Layout>
+
+<style>
+  .particle-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .particle-wrapper :global(#tsparticles) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .particle-wrapper :global(canvas) {
+    pointer-events: auto;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  main :global(*) {
+    pointer-events: auto;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  footer p {
+    margin: 0;
+  }
+</style>
